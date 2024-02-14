@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+</head>
+<style>
+.clock
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid #08a696;
+    position: relative;
+    animation: rotateClockwise 12s infinite linear;
+}
+.dot
+{
+    width: 10px;
+    height: 10px;
+    background-color: #f26a1b;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.hour,
+.hour::before
+{
+    content: '';
+    width: 5px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center bottom;
+    background-color: #26ffdf;
+    border-radius: 10px;
+    
+}
+.hour::before 
+{
+    content: '';
+    width: 5px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: transparent;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform-origin: center bottom;
+}
+.min,
+.min::before
+{
+    content: '';
+    width: 3px;
+    height: 90px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center bottom;
+    background-color: #26ffdf;
+    border-radius: 10px;
+}
+.min::before 
+{
+    content: '';
+    width: 3px;
+    height: 90px;
+    background-color: transparent;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform-origin: center bottom;
+}
+@keyframes rotateClockwise 
+{
+    from 
+    {
+        transform: rotate(0deg);
+    }
+    to 
+    {
+        transform: rotate(360deg);
+    }
+}
+</style>
+<body>
+    <div class="clock">
+        <div class="dot"></div>
+        <div class="hour"></div>
+        <div class="min"></div>
+    </div>
+</body>
+</html>
