@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiden Text</title>
+</head>
+<style>
+.container 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.block 
+{
+    width: 350px;
+    height: 300px;
+    background-color: blue;
+    position: relative;
+    transition: transform 2s;
+}
+.block:hover 
+{
+    transform: perspective(500px) rotateY(45deg);
+}
+.block:first-child 
+{
+    margin-right: 1px;
+}
+.block:last-child 
+{
+    margin-left: 1px;
+}
+.text 
+{
+    color: black;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    font-weight: 00;
+}
+.block-right:hover 
+{
+    transform: perspective(500px) rotateY(-45deg);
+}
+</style>
+<body>
+    <div class="container">
+        <p class="text">HELLO</p>
+        <div class="block">
+        </div>
+        <div class="block block-right">
+        </div>
+    </div>
+    <script>
+        function rotateBlocks()
+        {
+            document.querySelectorAll('.block, .block-right').forEach(function(el)
+            {
+                el.style.transform='perspective(500px) rotateY(45deg)';               
+            });
+        }
+    </script>
+</body>
+</html>
