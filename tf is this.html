@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idk</title>
+</head>
+<style>
+body
+{
+  margin: 1;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.container 
+{
+  display: flex;
+  margin: 1;
+  width: 100%;
+}
+.text 
+{
+  flex: 1;
+  margin: 1;
+  padding: 20px;
+  transition: filter 0.3s;
+}
+.photo
+{
+  flex: 1;
+  margin: 1;
+  background-image: url('./ph/win10.png');
+  background-size: cover;
+  background-position: center;
+  transition: filter 0.3s;
+}
+.container:hover .text 
+{
+  filter: brightness(70%);
+}
+
+.container:hover .photo 
+{
+  filter: brightness(70%);
+}
+</style>
+<body>
+  <div class="container">
+    <div class="text">
+        <h2>Коли я розпочну курсову???</h2>
+        <p>Моя молодьож! Надєжда раси - Народа совєсть!</p>
+    </div>
+    <div class="photo"></div>
+</div>
+<div class="container">
+  <div class="photo"></div>
+  <div class="text">
+      <h2>Youth</h2>
+      <p>Нєжєголь</p>
+  </div>
+</div>
+<div class="container">
+  <div class="text">
+      <h2>Хочу мєрч молотівХ</h2>
+      <p>M8L8TH / Льовкін руле, Слава ЗСУ.</p>
+  </div>
+  <div class="photo"></div>
+</div>
+</body>
+</html>
